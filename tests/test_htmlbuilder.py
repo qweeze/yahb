@@ -1,4 +1,4 @@
-from htmlbuilder import (
+from yahb import (
     Document,
     a,
     body,

@@ -1,6 +1,6 @@
 [project]
 name = "yahb"
-version = "0.2.1"
+version = "0.3.0"
 description = "Yet another Python HTML builder"
 readme = "README.md"
 requires-python = ">=3.12"
@@ -73,8 +73,8 @@ exclude = [".venv", "scripts"]
 
 [tool.ruff.lint.isort]
 combine-as-imports = false
-force-to-top = ["htmlbuilder"]
-known-local-folder = ["htmlbuilder"]
+force-to-top = ["yahb"]
+known-local-folder = ["yahb"]
 no-lines-before = ["future", "standard-library"]
 
 [tool.ruff.lint.pylint]

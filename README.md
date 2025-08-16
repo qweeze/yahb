@@ -1,11 +1,11 @@
 # Yet Another Python HTML Builder
 
-A single-file, zero-dependency, fully-typed HTML builder
+A single-file, zero-dependency, fully-typed HTML builder library
 
 ### Usage:
 
 ```python
-from htmlbuilder import (
+from yahb import (
     Document,
     Element,
     body,
