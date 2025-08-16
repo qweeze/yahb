@@ -2,7 +2,7 @@
 
 A single-file, zero-dependency, fully-typed HTML builder
 
-# Usage:
+### Usage:
 
 ```python
 from htmlbuilder import (
