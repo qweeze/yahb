@@ -72,3 +72,45 @@ Output:
   </body>
 </html>
 ```
+
+### Installation
+
+```bash
+pip install yahb
+# or uv/poetry/pdm/next-shiny-thing add yahb
+```
+
+### Features
+
+- Elements and their attrubutes are parsed from [WHATWG site](https://html.spec.whatwg.org/) so we have nice IDE / typechecker support:
+
+```python
+button(type="circle")
+# mypy: Argument "type" to "button" has incompatible type "Literal['circle']";
+# expected "Literal['submit', 'reset', 'button']"
+
+a(href=None)
+# mypy: Argument "href" to "a" has incompatible type "None"; expected "str"
+```
+
+- String content is auto-escaped:
+```python
+print(div("<script>alert('XSS')</script>"))
+# <div>&lt;script&gt;alert(&#x27;XSS&#x27;)&lt;/script&gt;</div>
+```
+
+- Indentation levels support:
+```python
+print(div("Hello").to_html())
+# <div>Hello</div>
+
+print(div("Hello").to_html(indent=4))
+# <div>
+#     Hello
+# </div>
+```
+
+
+### Inspired by
+ - https://github.com/tvst/htbuilder
+ - https://github.com/jaimevp54/htmlBuilder
